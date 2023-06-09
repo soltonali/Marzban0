@@ -19,10 +19,11 @@ echo "marzban downloaded";
 echo "install deps..."
 pip install -r requirements.txt > /dev/null
 
-alembic upgrade head
+alembic upgrade head  > /dev/null
 sudo ln -s $(pwd)/marzban-cli.py /usr/bin/marzban-cli
 sudo chmod +x /usr/bin/marzban-cli
-marzban-cli completion install
+marzban-cli completion install  > /dev/null
+ls
 cp .env.example .env
 cp ./marzban0.service /var/lib/marzban/marzban.service
 systemctl enable /var/lib/marzban/marzban.service
