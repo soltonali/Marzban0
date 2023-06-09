@@ -3,9 +3,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+install_path='/opt/marzban'
 
-SQLALCHEMY_DATABASE_URL = config("SQLALCHEMY_DATABASE_URL", default="sqlite:///db.sqlite3")
-
+SQLALCHEMY_DATABASE_URL = config("SQLALCHEMY_DATABASE_URL", default=f"sqlite:///{install_path}/db.sqlite3")
 
 UVICORN_HOST = config("UVICORN_HOST", default="0.0.0.0")
 UVICORN_PORT = config("UVICORN_PORT", cast=int, default=8000)
@@ -13,16 +13,15 @@ UVICORN_UDS = config("UVICORN_UDS", default=None)
 UVICORN_SSL_CERTFILE = config("UVICORN_SSL_CERTFILE", default=None)
 UVICORN_SSL_KEYFILE = config("UVICORN_SSL_KEYFILE", default=None)
 
-
 DEBUG = config("DEBUG", default=False, cast=bool)
-DOCS = config("DOCS", default=False, cast=bool)
+DOCS = config("DOCS", default=True, cast=bool)
 
 VITE_BASE_API = f"http://127.0.0.1:{UVICORN_PORT}/api/" \
     if DEBUG and config("VITE_BASE_API", default="/api/") == "/api/" \
     else config("VITE_BASE_API", default="/api/")
 
 # XRAY_JSON = config("XRAY_JSON", default="./xray_config.json")
-XRAY_JSON = config("XRAY_JSON", default="/opt/marzban/xray_config.json")
+XRAY_JSON = config("XRAY_JSON", default=f"{install_path}/xray_config.json")
 XRAY_FALLBACKS_INBOUND_TAG = config("XRAY_FALLBACKS_INBOUND_TAG", cast=str, default="") or config(
     "XRAY_FALLBACK_INBOUND_TAG", cast=str, default=""
 )
@@ -30,7 +29,6 @@ XRAY_EXECUTABLE_PATH = config("XRAY_EXECUTABLE_PATH", default="/usr/local/bin/xr
 XRAY_ASSETS_PATH = config("XRAY_ASSETS_PATH", default="/usr/local/share/xray")
 XRAY_EXCLUDE_INBOUND_TAGS = config("XRAY_EXCLUDE_INBOUND_TAGS", default='').split()
 XRAY_SUBSCRIPTION_URL_PREFIX = config("XRAY_SUBSCRIPTION_URL_PREFIX", default="").strip("/")
-
 
 TELEGRAM_API_TOKEN = config("TELEGRAM_API_TOKEN", default=None)
 TELEGRAM_ADMIN_ID = config("TELEGRAM_ADMIN_ID", cast=int, default=0)
@@ -47,7 +45,6 @@ HOME_PAGE_TEMPLATE = config("HOME_PAGE_TEMPLATE", default="home/index.html")
 SUDOERS = {config("SUDO_USERNAME"): config("SUDO_PASSWORD")} \
     if config("SUDO_USERNAME", default='') and config("SUDO_PASSWORD", default='') \
     else {}
-
 
 WEBHOOK_ADDRESS = config("WEBHOOK_ADDRESS", default=None)
 WEBHOOK_SECRET = config("WEBHOOK_SECRET", default=None)
