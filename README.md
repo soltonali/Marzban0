@@ -29,12 +29,9 @@
 - [Marzban CLI](#marzban-cli)
 - [Marzban Node](#marzban-node)
 - [Webhook notifications](#webhook-notifications)
-- [Donation](#donation)
-- [License](#license)
-- [Contributors](#contributors)
 
 <details markdown="1">
-# <summary> Features </summary>
+<summary> Features </summary>
 
 - Built-in **Web UI**
 - Fully **REST API** backend
@@ -56,35 +53,21 @@
 - **Multi-admin** support (WIP)
 </details>
 
-# Installation guide
-
+Installation guide
 Run the following command
 
 ```bash
 sudo bash -c "$(curl -sL https://raw.githubusercontent.com/soltonali/Marzban0/master/easy_setup.sh)" @ install
 ```
 
-Once the installation is complete:
-
-- You will see the logs that you can stop watching them by closing the terminal or pressing `Ctrl+C`
-- The Marzban files will be located at `/opt/marzban`
-- The configuration file can be found at `/opt/marzban/.env` (refer to [configurations](#configuration) section to see variables)
-- The data files will be placed at `/var/lib/marzban`
-- You can access the Marzban dashboard by opening a web browser and navigating to `http://YOUR_SERVER_IP:8000/dashboard/` (replace YOUR_SERVER_IP with the actual IP address of your server)
-
 Next, you need to create a sudo admin for logging into the Marzban dashboard by the following command
 
 ```bash
-marzban cli admin create --sudo
+marzban-cli admin create 
 ```
 
 That's it! You can login to your dashboard using these credentials
 
-To see the help message of the Marzban script, run the following command
-
-```bash
-marzban --help
-```
 
 If you are eager to run the project using the source code, check the section below
 <details markdown="1">
