@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-install_path='/opt/marzban'
+install_path = '/opt/marzban'
 
 SQLALCHEMY_DATABASE_URL = config("SQLALCHEMY_DATABASE_URL", default=f"sqlite:///{install_path}/db.sqlite3")
 
