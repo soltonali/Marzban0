@@ -33,8 +33,8 @@
 - [License](#license)
 - [Contributors](#contributors)
 
-
-# Features
+<details markdown="1">
+# <summary> Features </summary>
 
 - Built-in **Web UI**
 - Fully **REST API** backend
@@ -54,6 +54,7 @@
 - Integrated **Command Line Interface (CLI)**
 - **Multi-language**
 - **Multi-admin** support (WIP)
+</details>
 
 # Installation guide
 
