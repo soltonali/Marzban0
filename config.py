@@ -5,7 +5,7 @@ load_dotenv()
 
 install_path='/opt/marzban'
 
-SQLALCHEMY_DATABASE_URL = config("SQLALCHEMY_DATABASE_URL", default=f"sqlite:///{install_path}/db.sqlite3")
+SQLALCHEMY_DATABASE_URL = config("SQLALCHEMY_DATABASE_URL", default=f"sqlite://{install_path}/db.sqlite3")
 
 UVICORN_HOST = config("UVICORN_HOST", default="0.0.0.0")
 UVICORN_PORT = config("UVICORN_PORT", cast=int, default=8000)
