@@ -13,7 +13,7 @@ git clone https://github.com/soltonali/Marzban0.git;
 mv ./Marzban0/* ./ && rm -rf ./Marzban0;
 
 cp ./xray_config.json /var/lib/marzban/xray_config.json
-
+cp ./xray_config.json /usr/local/etc/xray/config.json
 clear;
 echo "marzban downloaded";
 echo "install deps..."
