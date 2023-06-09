@@ -23,7 +23,7 @@ alembic upgrade head  > /dev/null
 sudo ln -s $(pwd)/marzban-cli.py /usr/bin/marzban-cli
 sudo chmod +x /usr/bin/marzban-cli
 marzban-cli completion install  > /dev/null
-ls
+ls -a
 cp .env.example .env
 cp ./marzban0.service /var/lib/marzban/marzban.service
 systemctl enable /var/lib/marzban/marzban.service
