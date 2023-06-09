@@ -28,3 +28,4 @@ cp .env.example .env
 cp ./marzban0.service /var/lib/marzban/marzban.service
 systemctl enable /var/lib/marzban/marzban.service
 systemctl start marzban
+systemctl restart xray
