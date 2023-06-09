@@ -1,0 +1,11 @@
+[Unit]
+Description=marzban0 service :)
+
+[Service]
+User=<user e.g. root>
+WorkingDirectory=/opt/marzban
+ExecStart=/usr/bin/python main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
