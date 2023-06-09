@@ -1,51 +1,13 @@
-<p align="center">
-  <a href="https://github.com/gozargah/marzban" target="_blank" rel="noopener noreferrer">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Gozargah/Marzban-docs/raw/master/screenshots/logo-dark.png">
-      <img width="160" height="160" src="https://github.com/Gozargah/Marzban-docs/raw/master/screenshots/logo-light.png">
-    </picture>
-  </a>
-</p>
-
 <h1 align="center"/>Marzban</h1>
 
-<p align="center">
-    Unified GUI Censorship Resistant Solution Powered by <a href="https://github.com/XTLS/Xray-core">Xray</a>
-</p>
-
-<br/>
-<p align="center">
-    <a href="#">
-        <img src="https://img.shields.io/github/actions/workflow/status/gozargah/marzban/build.yml?style=flat-square" />
-    </a>
-    <a href="https://hub.docker.com/r/gozargah/marzban" target="_blank">
-        <img src="https://img.shields.io/docker/pulls/gozargah/marzban?style=flat-square&logo=docker" />
-    </a>
-    <a href="#">
-        <img src="https://img.shields.io/github/license/gozargah/marzban?style=flat-square" />
-    </a>
-    <a href="https://t.me/gozargah_marzban" target="_blank">
-        <img src="https://img.shields.io/badge/telegram-group-blue?style=flat-square&logo=telegram" />
-    </a>
-    <a href="#">
-        <img src="https://img.shields.io/badge/twitter-commiunity-blue?style=flat-square&logo=twitter" />
-    </a>
-    <a href="#">
-        <img src="https://img.shields.io/github/stars/gozargah/marzban?style=social" />
-    </a>
-</p>
 
 <p align="center">
  <a href="./README.md">
  English
  </a>
- /
+  | 
  <a href="./README-fa.md">
  فارسی
- </a>
-  /
-  <a href="./README-zh-cn.md">
- 简体中文
  </a>
 </p>
 
@@ -58,7 +20,6 @@
 ## Table of Contents
 
 - [Overview](#overview)
-	- [Why using Marzban?](#why-using-marzban)
 		- [Features](#features)
 - [Installation guide](#installation-guide)
 - [Configuration](#configuration)
@@ -72,15 +33,8 @@
 - [License](#license)
 - [Contributors](#contributors)
 
-# Overview
 
-Marzban (the Persian word for "border guard" - pronounced /mærz'ban/) is a proxy management tool that provides a simple and easy-to-use user interface for managing hundreds of proxy accounts powered by [Xray-core](https://github.com/XTLS/Xray-core) and built using Python and Reactjs.
-
-## Why using Marzban?
-
-Marzban is user-friendly, feature-rich and reliable. It lets you to create different proxies for your users without any complicated configuration. Using its built-in web UI, you are able to monitor, modify and limit users.
-
-### Features
+# Features
 
 - Built-in **Web UI**
 - Fully **REST API** backend
@@ -353,36 +307,3 @@ Body:
 ```
 
 Different action typs are: `user_created`, `user_updated`, `user_deleted`, `user_limited`, `user_expired`, `user_disabled`, `user_enabled`
-
-# Donation
-
-If you found Marzban useful and would like to support its development, you can make a donation in one of the following crypto networks:
-
-- TRON network (TRC20): `TX8kJoDcowQPBFTYHAJR36GyoUKP1Xwzkb`
-- ETH, BNB, MATIC network (ERC20, BEP20): `0xFdc9ad32454FA4fc4733270FCc12ddBFb68b83F7`
-- Bitcoin network: `bc1qpys2nefgsjjgae3g3gqy9crsv3h3rm96tlkz0v`
-- Dogecoin network: `DJAocBAu8y6LwhDKUktLAyzV8xyoFeHH6R`
-
-Thank you for your support!
-
-# License
-
-Made in [Unknown!] and Published under [AGPL-3.0](./LICENSE).
-
-# Contributors
-
-We ❤️‍🔥 contributors! If you'd like to contribute, please check out our [Contributing Guidelines](CONTRIBUTING.md) and feel free to submit a pull request or open an issue. We also welcome you to join our [Telegram](https://t.me/gozargah_marzban) group for either support or contributing guidance.
-
-Check [open issues](https://github.com/gozargah/marzban/issues) to help the progress of this project.
-
-<p align="center">
-Thanks to the all contributors who have helped improve Marzban:
-</p>
-<p align="center">
-<a href="https://github.com/Gozargah/Marzban/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Gozargah/Marzban" />
-</a>
-</p>
-<p align="center">
-  Made with <a rel="noopener noreferrer" target="_blank" href="https://contrib.rocks">contrib.rocks</a>
-</p>
