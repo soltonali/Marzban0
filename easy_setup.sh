@@ -6,7 +6,7 @@ rm -rf "/var/lib/marzban";
 
 mkdir -p /opt/marzban;
 mkdir -p /var/lib/marzban/
-cd /opt/marzban;
+cd /opt/marzban
 
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
 git clone https://github.com/soltonali/Marzban0.git;

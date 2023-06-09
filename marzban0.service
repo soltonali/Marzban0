@@ -2,10 +2,9 @@
 Description=marzban0 service :)
 
 [Service]
-User=<user e.g. root>
 WorkingDirectory=/opt/marzban
 ExecStart=/usr/bin/python main.py
-Restart=always
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
