@@ -82,8 +82,14 @@ class Proxyman(XRayBase):
     def remove_inbound(self):
         raise NotImplementedError
 
+    def get_inbounds(self):
+        raise NotImplementedError
+
     def add_outbound(self):
         raise NotImplementedError
 
     def remove_outbound(self):
+        raise NotImplementedError
+
+    def get_outbounds(self):
         raise NotImplementedError
