@@ -76,8 +76,9 @@ class Proxyman(XRayBase):
                 )
             ))
 
-    def add_inbound(self):
-        raise NotImplementedError
+    def add_inbound(self, tag):
+        stub = command_pb2_grpc.HandlerServiceStub(self._channel)
+        stub.AddInbound()
 
     def remove_inbound(self):
         raise NotImplementedError
