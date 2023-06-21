@@ -1,38 +1,12 @@
 {
-  "log": {
-    "loglevel": "warning",
-    "access": "./access.log"
-  },
-  "inbounds": [
-    {
-      "port": 27002,
-      "protocol": "dokodemo-door",
-      "tag": "api"
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom",
-      "settings": {},
-      "tag": "freedom"
-    },
-    {
-      "tag": "block",
-      "protocol": "blackhole",
-      "settings": {
-        "response": {
-          "type": "http"
-        }
-      }
-    }
-  ],
+  "stats": {},
   "api": {
+    "tag": "api",
     "services": [
+      "StatsService",
       "HandlerService",
-      "LoggerService",
-      "StatsService"
-    ],
-    "tag": "api"
+      "LoggerService"
+    ]
   },
   "policy": {
     "levels": {
@@ -42,10 +16,23 @@
       }
     },
     "system": {
+      "statsInboundUplink": true,
       "statsInboundDownlink": true,
-      "statsInboundUplink": true
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
     }
   },
+  "inbounds": [
+      {
+        "listen": "0.0.0.0",
+        "port": 8080,
+        "protocol": "dokodemo-door",
+        "settings": {
+          "address": "0.0.0.0"
+        },
+        "tag": "api"
+      }
+  ],
   "routing": {
     "rules": [
       {
@@ -55,7 +42,7 @@
         "outboundTag": "api",
         "type": "field"
       }
-    ]
-  },
-  "stats": {}
+    ],
+    "domainStrategy": "AsIs"
+  }
 }
