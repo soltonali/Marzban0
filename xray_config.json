@@ -23,15 +23,22 @@
     }
   },
   "inbounds": [
-      {
-        "listen": "0.0.0.0",
-        "port": 8080,
-        "protocol": "dokodemo-door",
-        "settings": {
-          "address": "0.0.0.0"
-        },
-        "tag": "api"
-      }
+    {
+      "listen": "0.0.0.0",
+      "port": 8080,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "0.0.0.0"
+      },
+      "tag": "api"
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "tag": "freedom"
+    }
   ],
   "routing": {
     "rules": [
